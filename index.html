@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check ctevt result -nirmalr</title>
+    <link rel="stylesheet" type="text/css" href="ctevt.css">
+</head>
+<body>
+    <form id="urlForm">
+    <div class= "container">
+        <label for="prefix">Examination Year</label>
+        <div class="select">
+          <select id="prefix" name="prefix">
+            <option value="1">--Select--</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2072">2072</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2073">2073</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2074">2074</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2075">2075</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2075">2075</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2076">2076</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2077">2077</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2078">2078</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2079">2079</option>
+            <option value="https://itms.ctevt.org.np/download-to-pdf/2080">2080</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        
+        <label for="additionalPrefix">Select Additional Prefix:</label><br>
+        <div class="select">
+        <select class="select" id="additionalPrefix" name="additionalPrefix">
+            <option>--Select--</option>
+            <option value="3">PCL/Diploma</option>
+            <option value="2">Pre-Diploma</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+        <br>
+
+        <label for="segment1">Symbol no</label> <br>
+        <input class="select" type="text" id="segment1" name="segment1" placeholder="e.g. 1000324"><br>
+
+        <label for="segment2">DOB</label> <br>
+        <input class="select" type="text" id="segment2" name="segment2" placeholder="Date Format : YYYY-MM-DD"> <br> <br> 
+
+        <button class="button" type="submit">Check Result</button>
+        <div class = "down_note">
+        <p>Get back to <a href="https://www.nirmalr.com.np/" target="_blank">nirmalr.com.np</a></p>
+        </div>
+      </div>
+      </form>
+      
+      <script>
+        document.getElementById("urlForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const prefix = document.getElementById("prefix").value;
+            const additionalPrefix = document.getElementById("additionalPrefix").value;
+            const segment1 = document.getElementById("segment1").value;
+            const segment2 = document.getElementById("segment2").value;
+
+            // Combine the segments with the selected prefixes to form the new URL
+            const newURL = `${prefix}/${additionalPrefix}/${segment1}/${segment2}`;
+
+            // Redirect to the new URL
+            window.location.href = newURL;
+        });
+    </script>
+      
+</body>
+</html>
