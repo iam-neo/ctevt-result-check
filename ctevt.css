@@ -11,6 +11,7 @@
     border: 0;
     box-shadow: none;
     /* Personalize */
+    font-size: 15px;
     flex: 1;
     padding: 0 1em;
     color: #fff;
