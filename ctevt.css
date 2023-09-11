@@ -133,13 +133,25 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     margin-bottom: 2rem;
-    color: #777;
+    color: #f4efef;
+    font-size: 20px;
   }
   
+  img {
+    width: 150px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+  }
   
   .down_note {
     display: flex;
     justify-content: center;
+  }
+  
+  .image {
+    background-color: #34495e;
   }
 
   
